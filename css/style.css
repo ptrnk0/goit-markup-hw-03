@@ -74,10 +74,13 @@ button {
 
 /* Header */
 
+.header-box {
+    border-bottom: 1px solid #e7e9fc;
+}
+
 .header-container {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #e7e9fc;
 }
 
 .header-nav-container {
