@@ -1,24 +1,52 @@
+/* Reset */
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Global */
+
 body {
     font-family: "Roboto", sans-serif;
     color: #434455;
     background-color: #FFFFFF;
 }
 
-a {
-    text-decoration: none;
-}
-
-ol,
-ul {
-    list-style-type: none;
+address {
+    font-style: normal;
 }
 
 button {
     cursor: pointer;
 }
 
-address {
-    font-style: normal;
+.container {
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 /* Header and footer(only first part logo) */
