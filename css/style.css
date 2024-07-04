@@ -77,15 +77,17 @@ button {
 .header-container {
     display: flex;
     align-items: center;
+    border-bottom: 1px solid #e7e9fc;
 }
 
 .header-nav-container {
     display: flex;
-    gap: 76px;
+    align-items: center;
 }
 
 .header-logo {
     padding: 24px 0;
+    margin-right: 76px
 }
 
 .header-part-logo {
@@ -142,17 +144,9 @@ button {
 
 /* Order section */
 
-.title {
-    background: #2e2f42;
-}
-
-/* * {
-    outline: 4px solid green !important;
-} */
-
 .order-container {
     padding: 188px 0;
-    /* margin: 0 auto; */
+    background: #2e2f42;
 }
 
 .title-text {
@@ -178,6 +172,7 @@ button {
     border: none;
     border-radius: 4px;
     padding: 16px 32px;
+    min-width: 169px;
 }
 
 .title-button:focus,
@@ -192,8 +187,11 @@ button {
     gap: 24px;
 }
 
-.advantages-list-item {
+.advantages-container {
     padding: 120px 0;
+}
+
+.advantages-list-item {
     width: calc((100% - 24px) / 3);
 }
 
@@ -215,12 +213,9 @@ button {
 
 /* Team section */
 
-.team-section-container {
-    padding: 120px 0;
-}
-
-.team-section {
+.team-container {
     background: #f4f4fd;
+    padding: 120px 0;
 }
 
 .team-title {
@@ -243,6 +238,12 @@ button {
 
 .team-list-item {
     background: #fff;
+    width: calc((100% - 72px) / 4);
+    border-radius: 0px 0px 4px 4px
+}
+
+.team-list-item-text {
+    padding: 32px 0;
 }
 
 .staff-name {
@@ -253,7 +254,6 @@ button {
     text-align: center;
     color: #2e2f42;
     margin-bottom: 8px;
-    padding-top: 32px;
 }
 
 .staff-major {
@@ -262,7 +262,6 @@ button {
     letter-spacing: 0.02em;
     text-align: center;
     color: #434455;
-    padding-bottom: 32px;
 }
 
 /* Portfolio section */
@@ -287,12 +286,14 @@ button {
     gap: 24px;
     flex-wrap: wrap;
     justify-content: center;
+    row-gap: 48px;
 }
 
 .portfolio-list-item-text {
     border-bottom: 1px solid #e7e9fc;
     border-left: 1px solid #e7e9fc;
     border-right: 1px solid #e7e9fc;
+    padding: 32px 16px;
 }
 
 .app-name {
@@ -301,8 +302,6 @@ button {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
-    padding-top: 32px;
-    padding-left: 16px;
     margin-bottom: 8px;
 }
 
@@ -311,19 +310,17 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
-    padding-bottom: 32px;
-    padding-left: 16px;
 }
 
 /* Footer (without logo) */
 
 .main-footer {
     background: #2e2f42;
+    padding: 100px 0;
 }
 
 .footer-logo {
-    display: block;
-    padding-top: 100px;
+    display: inline-block;
     margin-bottom: 16px;
 }
 
@@ -336,6 +333,5 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
-    padding-bottom: 100px;
     max-width: 264px;
 }
