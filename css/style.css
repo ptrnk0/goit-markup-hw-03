@@ -35,6 +35,19 @@ body {
     background-color: #FFFFFF;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 address {
     font-style: normal;
 }
@@ -44,7 +57,7 @@ button {
 }
 
 .container {
-    width: 1158px;
+    max-width: 1158px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -61,17 +74,38 @@ button {
 
 /* Header */
 
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav-container {
+    display: flex;
+    gap: 76px;
+}
+
+.header-logo {
+    padding: 24px 0;
+}
+
 .header-part-logo {
     color: #2e2f42;
 }
 
+.header-nav-list {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
 
 .navigation {
+    display: block;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    padding: 24px 0;
 }
 
 .navigation:focus,
@@ -82,6 +116,15 @@ button {
 .navigation:active {
     color: #404bbf;
 
+}
+
+.header-contacts {
+    margin-left: auto;
+}
+
+.header-contacts-list {
+    display: flex;
+    gap: 40px;
 }
 
 .contacts-info {
@@ -103,6 +146,15 @@ button {
     background: #2e2f42;
 }
 
+/* * {
+    outline: 4px solid green !important;
+} */
+
+.order-container {
+    padding: 188px 0;
+    /* margin: 0 auto; */
+}
+
 .title-text {
     font-weight: 700;
     font-size: 56px;
@@ -110,15 +162,22 @@ button {
     letter-spacing: 0.02em;
     text-align: center;
     color: #fff;
+    margin: 0 auto 48px;
+    max-width: 496px;
 }
 
 .title-button {
+    display: block;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: #fff;
     background: #4d5ae5;
+    margin: 0 auto;
+    border: none;
+    border-radius: 4px;
+    padding: 16px 32px;
 }
 
 .title-button:focus,
@@ -128,12 +187,23 @@ button {
 
 /* Advantages section */
 
+.advantages-list {
+    display: flex;
+    gap: 24px;
+}
+
+.advantages-list-item {
+    padding: 120px 0;
+    width: calc((100% - 24px) / 3);
+}
+
 .advantages-title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .advantages-text {
@@ -144,6 +214,10 @@ button {
 }
 
 /* Team section */
+
+.team-section-container {
+    padding: 120px 0;
+}
 
 .team-section {
     background: #f4f4fd;
@@ -157,9 +231,17 @@ button {
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
+    margin-bottom: 72px;
 }
 
-.team-card {
+.team-section-list {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-list-item {
     background: #fff;
 }
 
@@ -170,6 +252,8 @@ button {
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
+    margin-bottom: 8px;
+    padding-top: 32px;
 }
 
 .staff-major {
@@ -178,9 +262,14 @@ button {
     letter-spacing: 0.02em;
     text-align: center;
     color: #434455;
+    padding-bottom: 32px;
 }
 
 /* Portfolio section */
+
+.portfolio-container {
+    padding: 120px 0;
+}
 
 .portfolio-title {
     text-transform: capitalize;
@@ -190,6 +279,20 @@ button {
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
+    margin-bottom: 72px;
+}
+
+.portfolio-list {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio-list-item-text {
+    border-bottom: 1px solid #e7e9fc;
+    border-left: 1px solid #e7e9fc;
+    border-right: 1px solid #e7e9fc;
 }
 
 .app-name {
@@ -198,6 +301,9 @@ button {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    padding-top: 32px;
+    padding-left: 16px;
+    margin-bottom: 8px;
 }
 
 .app-scope {
@@ -205,6 +311,8 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    padding-bottom: 32px;
+    padding-left: 16px;
 }
 
 /* Footer (without logo) */
@@ -213,13 +321,21 @@ button {
     background: #2e2f42;
 }
 
+.footer-logo {
+    display: block;
+    padding-top: 100px;
+    margin-bottom: 16px;
+}
+
+.footer-part-logo {
+    color: #f4f4fd;
+}
+
 .footer-text {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
-}
-
-.footer-part-logo {
-    color: #f4f4fd;
+    padding-bottom: 100px;
+    max-width: 264px;
 }
